@@ -44,6 +44,8 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
             this.SinglePlayerButton = new Guna.UI2.WinForms.Guna2Button();
             this.guna2VSeparator1 = new Guna.UI2.WinForms.Guna2VSeparator();
             this.BannerAnim = new System.Windows.Forms.Timer(this.components);
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.NormalOnlineButton = new Guna.UI2.WinForms.Guna2Button();
             this.TopPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -139,6 +141,7 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
             // BannerLabel
             // 
             this.BannerLabel.AutoSize = true;
+            this.BannerLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BannerLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.BannerLabel.Location = new System.Drawing.Point(-540, 7);
             this.BannerLabel.Name = "BannerLabel";
@@ -152,7 +155,7 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
             this.MultiplayerButton.CheckedState.Parent = this.MultiplayerButton;
             this.MultiplayerButton.Cursor = System.Windows.Forms.Cursors.Cross;
             this.MultiplayerButton.CustomImages.Parent = this.MultiplayerButton;
-            this.MultiplayerButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.MultiplayerButton.Dock = System.Windows.Forms.DockStyle.Top;
             this.MultiplayerButton.FillColor = System.Drawing.Color.Empty;
             this.MultiplayerButton.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MultiplayerButton.ForeColor = System.Drawing.Color.White;
@@ -160,7 +163,7 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
             this.MultiplayerButton.Location = new System.Drawing.Point(399, 30);
             this.MultiplayerButton.Name = "MultiplayerButton";
             this.MultiplayerButton.ShadowDecoration.Parent = this.MultiplayerButton;
-            this.MultiplayerButton.Size = new System.Drawing.Size(399, 395);
+            this.MultiplayerButton.Size = new System.Drawing.Size(401, 219);
             this.MultiplayerButton.TabIndex = 6;
             this.MultiplayerButton.Text = "Multijugador Local | Pantalla Dividida | MOD";
             this.MultiplayerButton.Click += new System.EventHandler(this.MultiplayerButton_Click);
@@ -199,12 +202,40 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
             this.BannerAnim.Interval = 1;
             this.BannerAnim.Tick += new System.EventHandler(this.BannerAnim_Tick);
             // 
+            // guna2Separator1
+            // 
+            this.guna2Separator1.FillColor = System.Drawing.Color.Gray;
+            this.guna2Separator1.Location = new System.Drawing.Point(499, 243);
+            this.guna2Separator1.Name = "guna2Separator1";
+            this.guna2Separator1.Size = new System.Drawing.Size(200, 10);
+            this.guna2Separator1.TabIndex = 8;
+            // 
+            // NormalOnlineButton
+            // 
+            this.NormalOnlineButton.CheckedState.Parent = this.NormalOnlineButton;
+            this.NormalOnlineButton.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.NormalOnlineButton.CustomImages.Parent = this.NormalOnlineButton;
+            this.NormalOnlineButton.Dock = System.Windows.Forms.DockStyle.Top;
+            this.NormalOnlineButton.FillColor = System.Drawing.Color.Empty;
+            this.NormalOnlineButton.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NormalOnlineButton.ForeColor = System.Drawing.Color.White;
+            this.NormalOnlineButton.HoverState.Parent = this.NormalOnlineButton;
+            this.NormalOnlineButton.Location = new System.Drawing.Point(399, 249);
+            this.NormalOnlineButton.Name = "NormalOnlineButton";
+            this.NormalOnlineButton.ShadowDecoration.Parent = this.NormalOnlineButton;
+            this.NormalOnlineButton.Size = new System.Drawing.Size(401, 170);
+            this.NormalOnlineButton.TabIndex = 9;
+            this.NormalOnlineButton.Text = "Multijugador | Online";
+            this.NormalOnlineButton.Click += new System.EventHandler(this.NormalOnlineButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.NormalOnlineButton);
+            this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.guna2VSeparator1);
             this.Controls.Add(this.MultiplayerButton);
             this.Controls.Add(this.SinglePlayerButton);
@@ -212,6 +243,7 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
             this.Controls.Add(this.TopPanel);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Call Of Duty 4 Modern Warfare Split Screen Mod";
@@ -239,6 +271,8 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
         private System.Windows.Forms.Panel panel1;
         private Guna.UI.WinForms.GunaLabel BannerLabel;
         private System.Windows.Forms.Timer BannerAnim;
+        private Guna.UI2.WinForms.Guna2Button NormalOnlineButton;
+        private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
     }
 }
 

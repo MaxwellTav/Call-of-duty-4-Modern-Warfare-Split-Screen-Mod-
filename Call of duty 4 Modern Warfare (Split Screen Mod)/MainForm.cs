@@ -8,7 +8,7 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
 {
     public partial class MainForm : Form
     {
-        string GitHubLink = "";
+        string GitHubLink = "https://github.com/MaxwellTav/Call-of-duty-4-Modern-Warfare-Split-Screen-Mod-";
         public MainForm()
         { InitializeComponent(); }
 
@@ -68,6 +68,12 @@ namespace Call_of_duty_4_Modern_Warfare__Split_Screen_Mod_
         private void BannerLabel_Click(object sender, EventArgs e)
         {
             Process.Start(GitHubLink);
+        }
+
+        private void NormalOnlineButton_Click(object sender, EventArgs e)
+        {
+            Process.Start(Application.StartupPath + @"\Shortcuts\cod1p.lnk");
+            Application.Exit();
         }
     }
 }
